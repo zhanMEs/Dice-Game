@@ -1,0 +1,152 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap'); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  font-family: sans-serif;
+  font-weight: 500;
+  height: 100vh;
+  background-image: linear-gradient(to top left, #826195 5%, #6fa8a5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 100px;
+  align-items: center;
+  transition: all 0.7s;
+  color: rgb(0, 210, 229);
+}
+
+.name {
+  position: relative;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.score {
+  font-size: 80px;
+  font-weight: 300;
+  color: rgb(247, 86, 58, 0.8);
+  margin-bottom: auto;
+}
+
+.player-active {
+  background-color: rgba(252, 242, 218, 0.7);
+  border-radius: 9px;
+}
+.player-active .name {
+  font-weight: 800;
+  color: rgb(247, 86, 58, 0.9);
+}
+.player-active .score {
+  font-weight: 400;
+}
+/* .player-active .current {
+  opacity: 1;
+} */
+
+.current {
+  background-color: #385184;
+  border-radius: 9px;
+  color: #fff;
+  width: 150px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.current-score {
+  font-size: 32px;
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(52, 52, 52);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 7px 20px;
+  border-radius: 30px;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-rule {
+  top: 15px;
+}
+
+.btn-new {
+  top: 70px;
+}
+.btn-roll {
+  top: 390px;
+}
+.btn-hold {
+  top: 460px;
+}
+
+.btn:hover {
+  background-color: rgb(174, 224, 222, 0.9);
+}
+
+.btn:active {
+  transform: translate(-50%, 4px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 165px;
+  transform: translateX(-50%);
+  height: 100px;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.winner {
+  background-color: #0e9a52;
+}
+
+.winner .name {
+  font-weight: 700;
+  color: #ff4d01;
+}
+
+.hidden {
+  display: none;
+}
